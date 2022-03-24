@@ -12,11 +12,10 @@ import javax.swing.*;
  * @author jkbar
  */
 public class Manufacturer extends javax.swing.JFrame {
-    private static JFrame mainMMenu; //to go back to manager menu
+
+    private static JFrame mainMenu; //to go back to manager menu
     private static JFrame mainManuMenu; //to go back to Manufacturer menu; 
-   
-    
-    
+
     /**
      * Creates new form Manufacturer
      */
@@ -34,6 +33,15 @@ public class Manufacturer extends javax.swing.JFrame {
     private void initComponents() {
 
         jButton1 = new javax.swing.JButton();
+        jTabbedPane1 = new javax.swing.JTabbedPane();
+        jTabbedPane3 = new javax.swing.JTabbedPane();
+        jTabbedPane7 = new javax.swing.JTabbedPane();
+        jTabbedPane8 = new javax.swing.JTabbedPane();
+        jTabbedPane9 = new javax.swing.JTabbedPane();
+        jTabbedPane10 = new javax.swing.JTabbedPane();
+        jTabbedPane11 = new javax.swing.JTabbedPane();
+        jTabbedPane12 = new javax.swing.JTabbedPane();
+        jTabbedPane13 = new javax.swing.JTabbedPane();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -44,28 +52,48 @@ public class Manufacturer extends javax.swing.JFrame {
             }
         });
 
+        jTabbedPane1.addTab("View Orders ", jTabbedPane3);
+
+        jTabbedPane8.addTab("Hats", jTabbedPane9);
+        jTabbedPane8.addTab("Shirts ", jTabbedPane10);
+        jTabbedPane8.addTab("Large", jTabbedPane11);
+        jTabbedPane8.addTab("Extra Large", jTabbedPane12);
+
+        jTabbedPane7.addTab("Clothes", jTabbedPane8);
+        jTabbedPane7.addTab("tab2", jTabbedPane13);
+
+        jTabbedPane1.addTab("View Supplies", jTabbedPane7);
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addComponent(jButton1)
-                .addGap(0, 904, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jTabbedPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 892, Short.MAX_VALUE)
+                .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addComponent(jButton1)
-                .addGap(0, 576, Short.MAX_VALUE))
+                .addGap(0, 0, Short.MAX_VALUE))
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(jTabbedPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 592, Short.MAX_VALUE)
+                .addContainerGap())
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        dispose();
+        mainMenu = new ManagerMenu();
+        mainMenu.setVisible(true);
 //        if(manager == true){
 //            dispose();
-//            mainMMenu = new MainMenu();
+//            mainMMenu = new ManagerMenu();
 //            mainMMenu.setVisible(true);
 //        }else 
 //            exit(0);
@@ -109,5 +137,14 @@ public class Manufacturer extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
+    private javax.swing.JTabbedPane jTabbedPane1;
+    private javax.swing.JTabbedPane jTabbedPane10;
+    private javax.swing.JTabbedPane jTabbedPane11;
+    private javax.swing.JTabbedPane jTabbedPane12;
+    private javax.swing.JTabbedPane jTabbedPane13;
+    private javax.swing.JTabbedPane jTabbedPane3;
+    private javax.swing.JTabbedPane jTabbedPane7;
+    private javax.swing.JTabbedPane jTabbedPane8;
+    private javax.swing.JTabbedPane jTabbedPane9;
     // End of variables declaration//GEN-END:variables
 }
